@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BillionaireBlocker</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Blocked Keywords</h2>
+
+    <!-- Search input -->
+    <div class="search-group">
+      <input type="text" id="search-input" placeholder="Search keywords..." />
+    </div>
+
+    <!-- Keywords list container -->
+    <div id="keywords-list"></div>
+
+    <!-- Add a new keyword -->
+    <div class="input-group">
+      <input type="text" id="keyword-input" placeholder="Enter keyword" />
+      <button id="add-keyword">Add</button>
+    </div>
+
+    <!-- Show/Hide toggle button -->
+    <button id="toggle-visibility" class="toggle-btn">Show</button>
+
+    <!-- Status message area -->
+    <div class="status" id="status"></div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="../utils/constants.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

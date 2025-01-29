@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "BillionaireBlocker",
+  "version": "1.0",
+  "description": "Hide content from oligarchs with fragile egos",
+  "permissions": ["storage", "activeTab", "tabs", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [{
+  "matches": ["<all_urls>"],
+  "css": ["src/content/content.css"],
+  "js": [
+    "src/utils/constants.js",
+    "src/content/content.js"
+  ]
+}],
+"background": {
+  "service_worker": "src/background/background.js"
+}
+}

@@ -1,0 +1,55 @@
+.billionaire-blocker-counter {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background: #ffffffeb;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 999999;
+  font-family: Arial, sans-serif;
+  color: #333;
+  transition: opacity 0.3s, transform 0.3s;
+  cursor: pointer; /* Make it look clickable */
+}
+
+.billionaire-blocker-counter:hover {
+  background: #fff;
+}
+
+.billionaire-blocker-counter.hide {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+}
+
+/* Optional hidden items panel */
+.billionaire-blocker-details {
+  position: fixed;
+  bottom: 4rem;
+  right: 1rem;
+  width: 240px;
+  max-height: 250px;
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  z-index: 999999;
+}
+
+.billionaire-blocker-details.hide {
+  display: none;
+}
+
+.billionaire-blocker-details .hidden-item {
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 0.3rem;
+}
+
+.billionaire-blocker-details .hidden-item:last-child {
+  border-bottom: none;
+}
